@@ -25,15 +25,23 @@
    </script>
    
    <body id="top">
-   <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-info" id="mainNav">
+   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-info" id="mainNav">
        <div class="container">
            <a class="navbar-brand js-scroll-trigger" href="#top">Registration</a>
            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-lable="Toggle Navigation">Menue <i class="fa fa-bars"></i></button>
            <div class="collapse navbar-collapse" id="navbarResponsive">
-               <ul class="navbar-nav text-uppercase ml-auto" >
+               <ul class="navbar-nav text-uppercase md-auto" >
                    <li class="nav-iteam"><a class="nav-link js-scroll-trigger" href="#About">About</a></li>
-                   <li class="nav-iteam"><a class="nav-link js-scroll-trigger" href="#Students">Student</a></li>
+                   <li class="nav-iteam dropdown"><a class="nav-link js-scroll-trigger" href="#Students" id="navbarDropdown" role="button" data-trigger="dropdown">Students</a></li>
+                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dorpdown-item" href="#">Student List</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Hostel Registration</a>
+                     </div>
+                  
                    <li class="nav-iteam"><a class="nav-link js-scroll-trigger" href="#Institutions">Institutions</a></li>
+                   <li class="nav-iteam"><a class="nav-link js-scroll-trigger" href="#Student List">Student List</a></li>
+                   <li class="nav-iteam"><a class="nav-link js-scroll-trigger" href="#Hostel Registration">Hostel</a></li>
                    <li class="nav-iteam"><a class="nav-link js-scroll-trigger" href="#Verification">Verification</a></li>
                    <li class="nav-iteam"><a class="nav-link js-scroll-trigger" href="#Contact Us">Contact Us</a></li>
                </ul>
