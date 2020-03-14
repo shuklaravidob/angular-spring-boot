@@ -18,8 +18,9 @@ import { from } from 'rxjs';
     FormsModule,
     ButtonsModule.forRoot(),
     BsDatepickerModule.forRoot(),
-    BsDropdownModule.forRoot(),
+    BsDropdownModule.forRoot()
   ],
+  exports:[BsDatepickerModule],
   providers: [],
   bootstrap: [AppComponent]
 })
