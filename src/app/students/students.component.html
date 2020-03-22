@@ -3,6 +3,44 @@
     <title></title>
   </head>
   <body>
+     <!-- This is student data fetched from REST API of Java-->
+     <h1>Students Fetched from Java API</h1>
+     <div id="customers" style="display:inline-grid;">
+      <table>
+        <tr>
+          <td>Student Id</td>
+          <td>FistName</td>
+          <td>LastName</td>
+          <td>RollNumber</td>
+          <td>DateOfBirth</td>
+          <td>Address</td>
+          <td>ContactNumber</td>
+        </tr>
+        <tr *ngFor="let student of students">
+          <td >
+            <h5>{{student.studId}}</h5>
+          </td>
+          <td >
+            <h5>{{student.firstName}}</h5>
+          </td>
+          <td >
+            <h5>{{student.lastName}}</h5>
+          </td>
+          <td >
+            <h5>{{student.rollNumber}}</h5>
+          </td>
+          <td >
+            <h5>{{student.dateOfBirth}}</h5>
+          </td>
+          <td >
+            <h5>{{student.address}}</h5>
+          </td>
+          <td >
+            <h5>{{student.contactNumber}}</h5>
+          </td>
+        </tr>
+      </table>
+    </div>
     <div class="container">
         <div class="row">
            <div class="col-md-3"></div>

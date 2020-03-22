@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import {FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import {HttpClientModule,HttpClient} from '@angular/common/http';
 import {NewCmpComponent} from './new-cmp/new-cmp.component';
 import {AlertModule,ButtonsModule} from 'ngx-bootstrap';
 import {BsDatepickerModule} from 'ngx-bootstrap/datepicker';
@@ -22,6 +23,7 @@ import { StudentsComponent } from './students/students.component';
     BrowserModule,
     FormsModule,
     ButtonsModule,
+    HttpClientModule,
     BsDatepickerModule,
     BsDropdownModule,
     AppRoutingModule
