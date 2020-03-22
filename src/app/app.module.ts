@@ -8,19 +8,24 @@ import {AlertModule,ButtonsModule} from 'ngx-bootstrap';
 import {BsDatepickerModule} from 'ngx-bootstrap/datepicker';
 import {BsDropdownModule} from 'ngx-bootstrap';
 import { from } from 'rxjs';
+import { HomeComponent } from './home/home.component';
+import { StudentsComponent } from './students/students.component';
+
 @NgModule({
   declarations: [
     AppComponent,
-    NewCmpComponent
+    NewCmpComponent,
+    HomeComponent,
+    StudentsComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    ButtonsModule.forRoot(),
-    BsDatepickerModule.forRoot(),
-    BsDropdownModule.forRoot()
+    ButtonsModule,
+    BsDatepickerModule,
+    BsDropdownModule,
+    AppRoutingModule
   ],
-  exports:[BsDatepickerModule],
   providers: [],
   bootstrap: [AppComponent]
 })

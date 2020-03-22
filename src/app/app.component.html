@@ -1,20 +1,65 @@
 
 <html lang = "en">
  
-<head> 
+   <head> 
       <meta charset = "utf-8"> 
       <title></title> 
       <base href = "/"> 
       <meta name = "viewport" content = "width = device-width, initial-scale = 1"> 
       <link rel = "icon" type = "image/x-icon" href = "favicon.ico"> 
-   </head> 
-   <body>
+   </head>
+   <script>
+    $(function(){
+     $('.dates #user1').datepicker({
+       'datepicker': true,
+       'format': 'yyyy-mm-dd',
+       'value': '14-03-2020',
+     });
+    });
+ </script> 
+  <body id="top">
+       <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-info" id="mainNav">
+           <div class="container">
+               <a class="navbar-brand js-scroll-trigger" href="#top">Registration</a>
+               <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-lable="Toggle Navigation">Menue <i class="fa fa-bars"></i></button>
+               <div class="collapse navbar-collapse" id="navbarResponsive">
+                   <ul class="navbar-nav text-uppercase md-auto" >     
+                       <li class="nav-iteam"><a class="nav-link js-scroll-trigger" href="#About">About</a></li>
+                       <li class="nav-iteam dropdown"><a class="nav-link dropdown-toggle" href="#Students" id="navbarDropdown" role="button" data-toggle="dropdown">Students</a>
+                       <ul class="dropdown-menu">
+                         <li><a href="" class="dropdown-item"></a>Student List </li>
+                         <li><a href="" class="dropdown-item"></a> Hostel Infomation</li>
+                       </ul> 
+                       </li>
+                       <li class="nav-iteam"><a class="nav-link js-scroll-trigger" href="#Institutions">Institutions</a></li>
+                       <li class="nav-iteam"><a class="nav-link js-scroll-trigger" href="#Student List">Student List</a></li>
+                       <li class="nav-iteam"><a class="nav-link js-scroll-trigger" href="#Hostel Registration">Hostel</a></li>
+                       <li class="nav-iteam"><a class="nav-link js-scroll-trigger" href="#Verification">Verification</a></li>
+                       <li class="nav-iteam"><a class="nav-link js-scroll-trigger" href="#Contact Us">Contact Us</a></li>
+                   </ul>
+                   <form class="form-inline">
+                      <input type="text" placeholder="search">
+                      <button class="btn btn-outline-secondary my-2 my-sm-0">search</button>
+                   </form>
+               </div>
+           </div>
+       </nav>
+           <header class="masthead">
+               <div class="container">
+                   <div class="intro-text"></div>
+               </div>
+           </header>
    
       <div style = "text-align:center">
-        <h1>
-      
-          </h1>
+        <h1></h1> 
+       <router-outlet></router-outlet>
       </div>    
+      <h1></h1> 
+      <nav> 
+        <a routerLink = "/home">Home</a> 
+        <a routerLink = "/students">Students</a> 
+        </nav> 
+    <router-outlet></router-outlet>
     <app-new-cmp></app-new-cmp>
-    </body>
-   </html>
+  </body>
+</html>
