@@ -11,13 +11,15 @@ import {BsDropdownModule} from 'ngx-bootstrap';
 import { from } from 'rxjs';
 import { HomeComponent } from './home/home.component';
 import { StudentsComponent } from './students/students.component';
+import { SubjectsComponent } from './subjects/subjects.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NewCmpComponent,
     HomeComponent,
-    StudentsComponent
+    StudentsComponent,
+    SubjectsComponent
   ],
   imports: [
     BrowserModule,
