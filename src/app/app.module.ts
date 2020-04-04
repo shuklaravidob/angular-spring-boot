@@ -12,6 +12,7 @@ import { from } from 'rxjs';
 import { HomeComponent } from './home/home.component';
 import { StudentsComponent } from './students/students.component';
 import { SubjectsComponent } from './subjects/subjects.component';
+import { HostelsComponent } from './hostels/hostels.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { SubjectsComponent } from './subjects/subjects.component';
     NewCmpComponent,
     HomeComponent,
     StudentsComponent,
-    SubjectsComponent
+    SubjectsComponent,
+    HostelsComponent
   ],
   imports: [
     BrowserModule,

@@ -3,12 +3,14 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { StudentsComponent } from './students/students.component';
 import { SubjectsComponent } from './subjects/subjects.component';
+import { HostelsComponent } from './hostels/hostels.component';
 import { from } from 'rxjs';
 
 const routes: Routes = [
    {path:"home", component:HomeComponent},
    {path:"students", component:StudentsComponent},
-   {path:"subjects", component:SubjectsComponent}
+   {path:"subjects", component:SubjectsComponent},
+   {path:"hostels", component:HostelsComponent}
 ];
 
 @NgModule({
@@ -16,4 +18,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { } export const
-RoutingConponent = [HomeComponent,StudentsComponent,SubjectsComponent];
+RoutingConponent = [HomeComponent,StudentsComponent,SubjectsComponent,HostelsComponent];

@@ -1,0 +1,190 @@
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+      <!-- This is hostel data fetched from REST API of Java-->
+      <h1>Hostels Fetched from Java API</h1>
+      <div id="customers" style="display:inline-grid;">
+       <table>
+         <tr>
+           <td>HostelId</td>
+           <td>HostelName</td>
+           <td>FirstName</td>
+           <td>LastName</td>
+           <td>RollNumber</td>
+           <td>MotherName</td>
+           <td>MotherContact</td>
+           <td>FatherName</td>
+           <td>FatherContact</td>
+           <td>DateOfBirth</td>
+           <td>Course</td>
+           <td>Branch</td>
+           <td>Year</td>
+           <td>Semester</td>
+           <td>RoomNumber</td>
+           <td>IdProof</td>
+           <td>GuardianName</td>
+           <td>GuardianContact</td>
+           <td>EmailId</td>
+           <td>ContactNumber</td>
+         </tr>
+         <tr *ngFor="let hostel of hostels">
+           <td >
+             <h5>{{hostel.hostelId}}</h5>
+           </td>
+           <td >
+             <h5>{{hostel.hostelName}}</h5>
+           </td>
+           <td >
+            <h5>{{hostel.firstName}}</h5>
+          </td>
+          <td >
+            <h5>{{hostel.lastName}}</h5>
+          </td>
+          <td >
+            <h5>{{hostel.rollNumber}}</h5>
+          </td>
+          <td >
+            <h5>{{hostel.motherName}}</h5>
+          </td>
+          <td >
+            <h5>{{hostel.motherContact}}</h5>
+          </td>
+          <td >
+            <h5>{{hostel.fatherName}}</h5>
+          </td>
+          <td >
+            <h5>{{hostel.fatherContact}}</h5>
+          </td>
+          <td >
+            <h5>{{hostel.dateOfBirth}}</h5>
+          </td>
+          <td >
+            <h5>{{hostel.course}}</h5>
+          </td>
+          <td >
+            <h5>{{hostel.branch}}</h5>
+          </td>
+          <td >
+            <h5>{{hostel.year}}</h5>
+          </td>
+           <td >
+             <h5>{{hostel.semester}}</h5>
+           </td>
+           <td>
+             <h5>{{hostel.roomNumber}}</h5>
+           </td>
+           <td >
+             <h5>{{hostel.idProof}}</h5>
+           </td>
+           <td >
+             <h5>{{hostel.guardianName}}</h5>
+           </td>
+           <td >
+             <h5>{{hostel.guardianContact}}</h5>
+           </td>
+           <td >
+            <h5>{{hostel.emailId}}</h5>
+          </td>
+          <td >
+            <h5>{{hostel.contactNumber}}</h5>
+          </td>
+         </tr>
+       </table>
+     </div>
+    <div class="container">
+        <div class="row">
+           <div class="col-md-3"></div>
+           <div class="col-md-6">
+                <h1 class="text-center">Hostel Information</h1>
+                 <label class="label col-md-3 control-label">Hostel Id</label>
+                 <div class="col-md-9">
+                   <input type="number" class="form-control" name="Hostel Id" placeholder="Hostel Id" required>
+                 </div>
+                 <label class="label col-md-3 control-label">Hostel Name</label>
+                 <div class="col-md-9">
+                    <input type="text" class="form-control" name="Hostel Name" placeholder="Hostel Name" required>
+                 </div>
+                 <label class="label col-md-3 control-label">First Name</label>
+                 <div class="col-md-9">
+                      <input type="text" class="form-control" name="First Name" placeholder="First Name" required>
+                 </div>
+                 <label class="label col-md-3 control-label">Last Name</label>
+                 <div class="col-md-9">
+                      <input type="text" class="form-control" name="Last Name" placeholder="Last Name" required>
+                 </div>
+                 <label class="label col-md-3 control-label">Roll Number</label>
+                 <div class="col-md-9">
+                      <input type="number" class="form-control" name="Roll Number" placeholder="Roll Number" required>
+                 </div>
+                 <label class="label col-md-3 control-label">Mother Name</label>
+                 <div class="col-md-9">
+                      <input type="text" class="form-control" name="Mother Name" placeholder="Mother Name" required>
+                 </div>
+                 <label class="label col-md-3 control-label">Mother Contact</label>
+                 <div class="col-md-9">
+                      <input type="number" class="form-control" name="Mother Contact" placeholder="Mother Contact" required>
+                 </div>
+                 <label class="label col-md-3 control-label">Father Name</label>
+                 <div class="col-md-9">
+                      <input type="text" class="form-control" name="Father Name" placeholder="Father Name" required>
+                 </div>
+                 <label class="label col-md-3 control-label">Father Contact</label>
+                 <div class="col-md-9">
+                      <input type="number" class="form-control" name="Father Contact" placeholder="Father Contact" required>
+                 </div>
+                 <label class="label col-md-3 control-label">Date Of Birth</label>
+                 <div class="col-md-9">
+                      <input type="date" class="form-control" name="Date Of Birth" placeholder="Date Of Birth" required>
+                 </div>
+                 <label class="label col-md-3 control-label">Course</label>
+                 <div class="col-md-9">
+                      <input type="text" class="form-control" name="course" placeholder="Course" required>
+                 </div>
+                 <label class="label col-md-3 control-label">Branch</label>
+                 <div class="col-md-9">
+                    <input type="text" class="form-control" name="Branch"   placeholder="Branch" required>
+                 </div>
+                 <label class="label col-md-3 control-label">Year</label>
+                 <div class="col-md-9">
+                    <input type="number" class="form-control" name="Year" placeholder="Year" required>
+                 </div>
+                 <label class="label col-md-3 control-label">Semester</label>
+                 <div class="col-md-9">
+                    <input type="number" class="form-control" name="Semester" placeholder="Semester" required>
+                 </div>
+                 <label class="label col-md-3 control-label">Room Number</label>
+                 <div class="col-md-9">
+                    <input type="number" class="form-control" name="Room Number" placeholder="Room Number" required>
+                 </div>
+                 <label class="label col-md-3 control-label">Id Proof</label>
+                 <div class="col-md-9">
+                    <input type="number" class="form-control" name="Id Proof" placeholder="Id Proof" required>
+                 </div>
+                 <label class="label col-md-3 control-label">Guardian Name</label>
+                 <div class="col-md-9">
+                    <input type="text" class="form-control" name="Guardian Name" placeholder="Guardian Name" required>
+                 </div>
+                 <label class="label col-md-3 control-label">Guardian Contact</label>
+                 <div class="col-md-9">
+                    <input type="number" class="form-control" name="Guardian Contact" placeholder="Guardian Contact" required>
+                 </div>
+                 <label class="label col-md-3 control-label">Email Id</label>
+                 <div class="col-md-9">
+                    <input type="email" class="form-control" name="Email Id" placeholder="Email Id" required>
+                 </div>
+                 <label class="label col-md-3 control-label">Contact Number</label>
+                 <div class="col-md-9">
+                    <input type="number" class="form-control" name="Contact Number" placeholder="Contact Number" required>
+                 </div>
+                 <a href="#"><div class="btn btn-secondary btn-outline-info">Submit</div></a>
+            
+           </div>
+           <div class="col-md-3"></div>
+        </div>
+    </div>
+  </body>
+</html>
+
+
