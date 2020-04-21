@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {FormsModule } from '@angular/forms';
+import {FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {HttpClientModule,HttpClient} from '@angular/common/http';
@@ -14,6 +14,7 @@ import { StudentsComponent } from './students/students.component';
 import { SubjectsComponent } from './subjects/subjects.component';
 import { HostelsComponent } from './hostels/hostels.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,6 +27,7 @@ import { HostelsComponent } from './hostels/hostels.component';
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     ButtonsModule,
     HttpClientModule,
     BsDatepickerModule,

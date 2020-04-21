@@ -6,6 +6,8 @@ import {Student} from '../models/student.model';
     providedIn: 'root'
   })
 export class StudentService{
+    [x: string]: any;
+    Studentservice: Student[];
 
     constructor(private http : HttpClient){}
     private userUrl ='/api/students';
