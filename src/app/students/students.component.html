@@ -4,7 +4,7 @@
   </head>
   <body>
      <!-- This is student data fetched from REST API of Java-->
-     <h1>Students Fetched from Java API</h1>
+    <!--  <h1>Students Fetched from Java API</h1>
      <div id="customers" style="display:inline-grid;">
       <table>
         <tr>
@@ -40,42 +40,43 @@
           </td>
         </tr>
       </table>
-    </div>
+    </div> -->
     <div class="container">
         <div class="row">
            <div class="col-md-3"></div>
            <div class="col-md-6">
                 <h1 class="text-center">Student Registration Form</h1>
+            <form [formGroup]="formdata" (ngSubmit) = "onClickSubmit(formdata.value)" >
              <label class="label col-md-3 control-label">First Name</label>
              <div class="col-md-9">
-                <input type="text" class="form-control" name="First Name" placeholder="First Name" required>
+                <input type="text" class="form-control" formControlName="firstName" name="First Name" placeholder="First Name" required>
              </div>
              <label class="label col-md-3 control-label">Last Name</label>
              <div class="col-md-9">
-                <input type="text" class="form-control" name="Last Name" placeholder="Last Name" required>
+                <input type="text" class="form-control" formControlName="lastName" name="Last Name" placeholder="Last Name" required>
              </div>
              <label class="label col-md-3 control-label">Roll No</label>
              <div class="col-md-9">
-                <input type="number" class="form-control" name="Roll Number" placeholder="Roll Number" required>
+                <input type="number" class="form-control" formControlName="rollNumber" name="Roll Number" placeholder="Roll Number" required>
              </div>
              <label class="label col-md-3 control-label">DOB</label>
              <div class="col-md-9">
-              <input type="date" class="form-control" name="Date Of Birth"  id="picker" placeholder="yyyy-mm-dd" required>
+              <input type="date" class="form-control" formControlName="dateOfBirth" name="Date Of Birth"  id="picker" placeholder="yyyy-mm-dd" required>
              </div>
              <label class="label col-md-3 control-label">E-mail</label>
              <div class="col-md-9">
-              <input type="E-mail" class="form-control" name="E-mail" placeholder="E-mail" required>
+              <input type="E-mail" class="form-control" formControlName="email" name="E-mail" placeholder="E-mail" required>
              </div>
              <label class="label col-md-3 control-label">Address</label>
              <div class="col-md-9">
-              <input type="text" class="form-control" name="Address" placeholder="Address" required>
+              <input type="text" class="form-control" formControlName="address" name="Address" placeholder="Address" required>
              </div>
              <label class="label col-md-3 control-label">Contact No</label>
              <div class="col-md-9">
-              <input type="number" class="form-control" name="Contact Number" placeholder="Contact Number" required>
+              <input type="number" class="form-control" formControlName="contactNumber" name="Contact Number" placeholder="Contact Number" required>
              </div>
-             <a href="#"><div class="btn btn-secondary btn-outline-info">Submit</div></a>
-            
+             <button [disabled]="!formdata.valid" value="Submit">Submit</button>
+            </form>
            </div>
            <div class="col-md-3"></div>
         </div>

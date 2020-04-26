@@ -5,5 +5,6 @@ export class Student {
     rollNumber : string;
     dateOfBirth : string;
     address : string;
+    email : string;
     contactNumber : string
 }

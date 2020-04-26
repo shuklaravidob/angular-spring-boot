@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { StudentService } from '../services/student.service';
 import { Student } from '../models/student.model';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
 @Component({
   selector: 'app-students',
   templateUrl: './students.component.html',
@@ -9,12 +9,14 @@ import { FormBuilder } from '@angular/forms';
 })
 export class StudentsComponent implements OnInit {
 
+  formdata;
   students : Student[];
   studentForm: { reset: () => void; };
   formBuilder: any;
+  studentData : Student;
 
   constructor(private studentService : StudentService, private fromBuilder:FormBuilder,) {
-    this.studentForm = this.formBuilder.group({
+   /* this.studentForm = this.formBuilder.group({
       stuId:'',
       firstName:'',
       lastName:'',
@@ -22,7 +24,23 @@ export class StudentsComponent implements OnInit {
       dateOfBirth:'',
       address:'',
       contactNumber:''
-    });
+    }); */
+
+    this.formdata = new FormGroup({
+      firstName: new FormControl("", Validators.compose([
+         Validators.required,
+         Validators.minLength(3)
+      ])),
+      lastName: new FormControl("", Validators.compose([
+         Validators.required,
+         Validators.minLength(3)
+      ])),
+      address:new FormControl(""),
+      email:new FormControl(""),
+      rollNumber:new FormControl(""),
+      dateOfBirth:new FormControl(""),
+      contactNumber:new FormControl("")
+   });
    }
   
   ngOnInit(): void {
@@ -39,4 +57,21 @@ export class StudentsComponent implements OnInit {
 
     console.warn('Your order has been submitted', customerData);
   }
+
+  onClickSubmit(data) {
+    this.studentData = new Student();
+       this.studentData.firstName = data.firstName;
+       this.studentData.lastName = data.lastName;
+       this.studentData.address = data.address;
+       this.studentData.rollNumber = data.rollNumber;
+       this.studentData.contactNumber = data.contactNumber;
+       this.studentData.dateOfBirth = data.dateOfBirth;
+       this.studentData.email = data.email;
+       this.studentService.save(this.studentData).subscribe(
+          dataR => {
+            alert("Student saved successfully ID : "+dataR.studId+" Name : "+dataR.firstName+" "+dataR.lastName);
+          }
+       );
+       
+ }
 }

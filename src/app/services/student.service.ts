@@ -16,10 +16,10 @@ export class StudentService{
 
         return this.http.post<User>(this.userUrl+'/login',user);
 
-    }
-    public save(user : User){
-      return this.http.post<User>(this.userUrl+'/save',user);
     } */
+    public save(student : Student){
+      return this.http.post<Student>(this.userUrl,student);
+    }
     public getStudents(){
       return this.http.get<Student[]>(this.userUrl);
     }
