@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Student} from '../models/student.model';
 
 @Injectable({
@@ -23,7 +23,17 @@ export class StudentService{
     public getStudents(){
       return this.http.get<Student[]>(this.userUrl);
     }
-    /*public deleteUser(user : User){
-      return this.http.delete(this.userUrl+'/deleteUser/'+user.id);
-    }*/
+    public deleteStudent(student : Student){
+      const options = {
+        headers: new HttpHeaders({
+          'Content-Type': 'application/json'
+        }),
+        body: student
+      }
+      console.log(options);
+      return this.http.delete(this.userUrl,options);
+    }
+    public update(student : Student){
+      return this.http.put<Student>(this.userUrl,student);
+    }
   }

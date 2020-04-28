@@ -4,8 +4,9 @@
   </head>
   <body>
      <!-- This is student data fetched from REST API of Java-->
-     <h1>Students Fetched from Java API</h1>
-     <div id="customers" style="display:inline-grid;">
+     
+     <div id="customers" style="display:inline-grid;margin-left: 95px;">
+     <h1 class="header">Students Fetched from Java API</h1>
       <table>
         <tr>
           <td>Student Id</td>
@@ -15,32 +16,39 @@
           <td>DateOfBirth</td>
           <td>Address</td>
           <td>ContactNumber</td>
+          <td>Action</td>
         </tr>
         <tr *ngFor="let student of students">
           <td >
-            <h5>{{student.studId}}</h5>
+            <input type="text" [(ngModel)]="student.studId" disabled>
           </td>
           <td >
-            <h5>{{student.firstName}}</h5>
+            <input type="text" [(ngModel)]="student.firstName" [disabled]="edit">
           </td>
           <td >
-            <h5>{{student.lastName}}</h5>
+            <input type="text" [(ngModel)]="student.lastName" [disabled]="edit">
           </td>
           <td >
-            <h5>{{student.rollNumber}}</h5>
+            <input type="text" [(ngModel)]="student.rollNumber" [disabled]="edit">
           </td>
           <td >
-            <h5>{{student.dateOfBirth}}</h5>
+            <input type="text" [(ngModel)]="student.dateOfBirth" [disabled]="edit">
           </td>
           <td >
-            <h5>{{student.address}}</h5>
+            <input type="text" [(ngModel)]="student.address" [disabled]="edit">
           </td>
           <td >
-            <h5>{{student.contactNumber}}</h5>
+            <input type="text" [(ngModel)]="student.contactNumber" [disabled]="edit">
+          </td>
+          <td >
+            <button class="btn btn-danger" (click)="deleteStudent(student)" > Delete</button> &nbsp;&nbsp;&nbsp;
+            <button class="btn btn-danger" (click)="modifyStudent()" [style.display]="displayModify"> Modify</button>
+            <button class="btn btn-danger" (click)="submitStudent(student)" [style.display]="displaySubmit"> Submit</button>
           </td>
         </tr>
       </table>
     </div>
+    <br><br>
     <div class="container">
         <div class="row">
            <div class="col-md-3"></div>

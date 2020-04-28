@@ -14,8 +14,14 @@ export class StudentsComponent implements OnInit {
   studentForm: { reset: () => void; };
   formBuilder: any;
   studentData : Student;
+  edit : boolean;
+  displayModify : string;
+  displaySubmit : string;
 
   constructor(private studentService : StudentService, private fromBuilder:FormBuilder,) {
+       this.edit = true;
+       this.displayModify = 'inline';
+       this.displaySubmit = 'none';
    /* this.studentForm = this.formBuilder.group({
       stuId:'',
       firstName:'',
@@ -70,8 +76,31 @@ export class StudentsComponent implements OnInit {
        this.studentService.save(this.studentData).subscribe(
           dataR => {
             alert("Student saved successfully ID : "+dataR.studId+" Name : "+dataR.firstName+" "+dataR.lastName);
+            this.ngOnInit();
           }
        );
-       
- }
+      }
+      deleteStudent(student : Student) : void {
+        console.log(student.studId)
+        this.studentService.deleteStudent(student).subscribe(
+           data => {
+              this.students = this.students.filter(u => u != student);
+           } 
+        )
+      }
+      modifyStudent() : void {
+        console.log("Modify the student");
+        this.edit = false;
+        this.displayModify = 'none'
+        this.displaySubmit = 'inline';
+      }
+      submitStudent(student : Student) : void {
+        console.log(student.studId)
+        this.studentService.update(student).subscribe(
+          dataR => {
+            alert("Student saved successfully ID : "+dataR.studId+" Name : "+dataR.firstName+" "+dataR.lastName);
+            this.ngOnInit();
+          }
+       );
+      }
 }
