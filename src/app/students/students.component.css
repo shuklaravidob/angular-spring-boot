@@ -1,10 +1,7 @@
-table, th, td {
-    border: 1px solid black;
-  }
-  .header {
-    margin-left: 543px;
-    color: darkslategrey !important;
-  }
+*{
+    margin: 0px;
+    padding: 3px;
+}
 body{
     background-image: url(image.jpg);
     background-attachment: fixed;
@@ -12,32 +9,64 @@ body{
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    font-family: new time roman;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container {
+    position: relative;
+    border-radius: 5px;
+    background-color: transparent;
+    padding: 50px 0 50px 0;
 }
 h1{
     font-size: 40px;
     color:white;
     margin-top: 20px;
     margin-bottom: 30px;
+    padding-bottom: 0.50px;
+    margin-left: -200px;
+}
+.data{
+    display: none;
+}
+.customers{
+    display: none;
+}
+.text-center{
+    color : black;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 180px;
+}
+.label{
+    padding-top: 15px;
+    margin-left: 10px;
+}
+    
+.btn{
+    margin-top: 50px;
+    margin-left: 80px;
+    background-color: black;
 }
 .form-control{
-    background: transparent;
+    background: #D3D3D3;
     border: 0px;
-    border-radius: 0px;
-    border-bottom: 2px solid white;
-    font-size: 21px;
-    color: white;
+    border-bottom: 2px #D3D3D3;
+    font-size: 15px;
     margin-top: 20px;
+    border-radius: 10px;
+    margin-left: 5px;
+    padding-left: 10px;
+    width: 180px;
+    
 }
-.btn-info{
-    margin-top: 40px;
-    margin-left: 160px;
-    width: 190px;
-    font-size: 19px;
-    border-radius: 1000px;
-}
-.col-md-6{
-    background: rgba(0,0,0,0.4);
-    height: 920px;
+
+.col-md-10{
+    background: rgba(55, 19, 211, 0.4);
+    height: 520px;
     box-shadow: -1px 1px 60px 10px black insert;
+    border-radius: 25px;
+   
+}
+.row{
+    width: 640px;
 }
