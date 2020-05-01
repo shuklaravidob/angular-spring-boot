@@ -2,8 +2,11 @@
     margin: 0px;
     padding: 3px;
 }
+.header {
+    margin-left: 0px !important;
+}
 body{
-    background-image: url(image.jpg);
+    background-image: url('../images/image.jpg');
     background-attachment: fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
