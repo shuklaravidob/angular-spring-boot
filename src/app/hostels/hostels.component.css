@@ -1,14 +1,10 @@
-header.masthead{
-    text-align:center;
-    color: white;
-    background-attachment: scroll;
-    background-position: center center;
-    background-size: cover;
-}
-*{
-    margin: 0px;
-    padding: 0px;
-}
+table, th, td {
+    border: 1px solid black;
+  }
+  .header {
+    margin-left: 543px;
+    color: darkslategrey !important;
+  }
 body{
     background-image: url(image.jpg);
     background-attachment: fixed;

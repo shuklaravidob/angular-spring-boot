@@ -4,8 +4,9 @@
   </head>
   <body>
       <!-- This is student data fetched from REST API of Java-->
-      <h1>Subjects Fetched from Java API</h1>
-      <div id="customers" style="display:inline-grid;">
+     
+      <div id="customers" style="display:inline-grid;margin-left: 95px;">
+        <h1 class="header">Subjects Fetched from Java API</h1>
        <table>
          <tr>
            <td>SubjectId</td>
@@ -17,64 +18,72 @@
            <td>course</td>
          </tr>
          <tr *ngFor="let subject of subjects">
-           <td >
-             <h5>{{subject.subId}}</h5>
-           </td>
-           <td >
-             <h5>{{subject.subName}}</h5>
-           </td>
-           <td >
-             <h5>{{subject.subCode}}</h5>
-           </td>
-           <td>
-             <h5>{{subject.branchCode}}</h5>
-           </td>
-           <td >
-             <h5>{{subject.branchName}}</h5>
-           </td>
-           <td >
-             <h5>{{subject.semester}}</h5>
-           </td>
-           <td >
-             <h5>{{subject.course}}</h5>
-           </td>
+          <td >
+            <input type="text" [(ngModel)]="subject.subId" disabled>
+          </td>
+          <td >
+            <input type="text" [(ngModel)]="subject.subjectName" [disabled]="edit">
+          </td>
+          <td >
+            <input type="text" [(ngModel)]="subject.SubjectCode" [disabled]="edit">
+          </td>
+          <td >
+            <input type="text" [(ngModel)]="subject.branchName" [disabled]="edit">
+          </td>
+          <td >
+            <input type="text" [(ngModel)]="subject.branchCode" [disabled]="edit">
+          </td>
+          <td >
+            <input type="text" [(ngModel)]="subject.Semester" [disabled]="edit">
+          </td>
+          <td >
+            <input type="text" [(ngModel)]="subject.course" [disabled]="edit">
+          </td>
+          <td >
+            <button class="btn btn-danger" (click)="deleteSubject(subject)" > Delete</button> &nbsp;&nbsp;&nbsp;
+            <button class="btn btn-danger" (click)="modifySubject()" [style.display]="displayModify"> Modify</button>
+            <button class="btn btn-danger" (click)="submitSubject(subject)" [style.display]="displaySubmit"> Submit</button>
+          </td>
          </tr>
        </table>
      </div>
+     <br><br>
     <div class="container">
         <div class="row">
            <div class="col-md-3"></div>
            <div class="col-md-6">
                 <h1 class="text-center">Subject Information</h1>
+                <form [formGroup]="formdata" (ngSubmit) = "onClickSubmit(formdata.value)" >
                  <label class="label col-md-3 control-label">Subject Id</label>
                  <div class="col-md-9">
-                   <input type="number" class="form-control" name="Subject Id" placeholder="Subject Id" required>
+                   <input type="number" class="form-control"  formControlName="SubjectId" name="Subject Id" placeholder="Subject Id" required>
                  </div>
                  <label class="label col-md-3 control-label">Subject Name</label>
                  <div class="col-md-9">
-                    <input type="text" class="form-control" name="Subject Name" placeholder="Subject Name" required>
+                    <input type="text" class="form-control"  formControlName="subjectName" name="Subject Name" placeholder="Subject Name" required>
                  </div>
                  <label class="label col-md-3 control-label">Subject code</label>
                  <div class="col-md-9">
-                      <input type="text" class="form-control" name="Subject Code" placeholder="Subject Code" required>
+                      <input type="text" class="form-control"  formControlName="subjectCode" name="Subject Code" placeholder="Subject Code" required>
                  </div>
                  <label class="label col-md-3 control-label">Branch Name</label>
                  <div class="col-md-9">
-                    <input type="text" class="form-control" name="Branch Name" placeholder="Branch Name" required>
+                    <input type="text" class="form-control"  formControlName="branchName" name="Branch Name" placeholder="Branch Name" required>
                  </div>
                  <label class="label col-md-3 control-label">Branch Code</label>
                  <div class="col-md-9">
-                    <input type="number" class="form-control" name="Branch Code"   placeholder="Branch Code" required>
+                    <input type="number" class="form-control"  formControlName="branchCode" name="Branch Code"   placeholder="Branch Code" required>
                  </div>
                  <label class="label col-md-3 control-label">Semester</label>
                  <div class="col-md-9">
-                    <input type="number" class="form-control" name="Semester" placeholder="Semester" required>
+                    <input type="number" class="form-control"  formControlName="Semester" name="Semester" placeholder="Semester" required>
                  </div>
                  <label class="label col-md-3 control-label">Course</label>
                  <div class="col-md-9">
-                    <input type="text" class="form-control" name="Course" placeholder="Course" required>
+                    <input type="text" class="form-control"  formControlName="course" name="Course" placeholder="Course" required>
                  </div>
-                 <a href="#"><div class="btn btn-secondary btn-outline-info">Submit</div></a>           
+                 <a href="#"><div class="btn btn-secondary btn-outline-info">Submit</div></a>   
+                 </form>        
            </div>
            <div class="col-md-3"></div>
         </div>

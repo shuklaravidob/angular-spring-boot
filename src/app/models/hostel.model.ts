@@ -1,7 +1,7 @@
 import { EmailValidator } from '@angular/forms';
 
 export class Hostel {
-    hotelId : BigInteger;
+    hostelId : BigInteger;
     hostelName : string;
     firstName : string;
     lastName : string;
@@ -10,7 +10,7 @@ export class Hostel {
     motherContact : BigInteger;
     fatherName : string;
     fatherContact : BigInteger;
-    dateofBirth : Date;
+    dateOfBirth : Date;
     course : string;
     branch : string;
     year : string;
@@ -19,6 +19,7 @@ export class Hostel {
     idProof : BigInteger;
     guardianName : string;
     guardianContact : BigInteger;
+    address : string;
     emailId : EmailValidator;
     contactNumber : BigInteger
 }
