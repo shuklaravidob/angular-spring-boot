@@ -1,0 +1,77 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="login.component.css"/>
+    <title></title>
+  </head>
+  <body>
+     <!-- This is login form from REST API of Java-->
+     
+    <!-- <div id="customers" style="display:inline-grid;margin-left: 95px;">
+     <h1 class="header">Students Fetched from Java API</h1>
+      <table>
+        <tr>
+          <td>Student Id</td>
+          <td>FistName</td>
+          <td>LastName</td>
+          <td>RollNumber</td>
+          <td>DateOfBirth</td>
+          <td>Address</td>
+          <td>ContactNumber</td>
+          <td>Action</td>
+        </tr>
+        <tr *ngFor="let student of students">
+          <td >
+            <input type="text" [(ngModel)]="student.studId" disabled>
+          </td>
+          <td >
+            <input type="text" [(ngModel)]="student.firstName" [disabled]="edit">
+          </td>
+          <td >
+            <input type="text" [(ngModel)]="student.lastName" [disabled]="edit">
+          </td>
+          <td >
+            <input type="text" [(ngModel)]="student.rollNumber" [disabled]="edit">
+          </td>
+          <td >
+            <input type="text" [(ngModel)]="student.dateOfBirth" [disabled]="edit">
+          </td>
+          <td >
+            <input type="text" [(ngModel)]="student.address" [disabled]="edit">
+          </td>
+          <td >
+            <input type="text" [(ngModel)]="student.contactNumber" [disabled]="edit">
+          </td>
+          <td >
+            <button class="btn btn-danger" (click)="deleteStudent(student)" > Delete</button> &nbsp;&nbsp;&nbsp;
+            <button class="btn btn-danger" (click)="modifyStudent()" [style.display]="displayModify"> Modify</button>
+            <button class="btn btn-danger" (click)="submitStudent(student)" [style.display]="displaySubmit"> Submit</button>
+          </td>
+        </tr>
+      </table>
+    </div>-->
+    <br><br>
+    <div class="container">
+        <div class="login-form">
+            <form>
+                <h2 class="text-center">Login Portal</h2>
+                <div class="form-group">
+                    <label for="label col-md-3 control-label" style = "margin-left: 60px;">User Name</label>
+                    <input type="text" class="form-control" placeholder="Username" required="required">
+                </div>
+                <div class="form-group">
+                    <label for="label col-md-3 control-label"  style = "margin-left: 68px;">Password</label>
+                    <input type="password" class="form-control" placeholder="Password" required="required">
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn-login btn-secondary btn-outline-info">Log in</button>
+                </div>
+                <div class="clearfix">
+                    <label class="pull-left checkbox-inline"><input type="checkbox"> Remember me</label>
+                    <a href="#" class="pull-right">Forgot Password?</a>
+                </div>        
+            </form>
+           <!-- <p class="text-center-login"><a href="#">Create an Account</a></p>-->
+        </div>       
+    </div>
+  </body>
+</html>
