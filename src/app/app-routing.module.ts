@@ -5,12 +5,14 @@ import { StudentsComponent } from './students/students.component';
 import { SubjectsComponent } from './subjects/subjects.component';
 import { HostelsComponent } from './hostels/hostels.component';
 import { from } from 'rxjs';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
    {path:"home", component:HomeComponent},
    {path:"students", component:StudentsComponent},
    {path:"subjects", component:SubjectsComponent},
-   {path:"hostels", component:HostelsComponent}
+   {path:"hostels", component:HostelsComponent},
+   {path:"login", component:LoginComponent}
 ];
 
 @NgModule({
@@ -18,4 +20,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { } export const
-RoutingConponent = [HomeComponent,StudentsComponent,SubjectsComponent,HostelsComponent];
+RoutingConponent = [HomeComponent,StudentsComponent,SubjectsComponent,HostelsComponent,LoginComponent];

@@ -4,7 +4,7 @@
   </head>
   <body>
       <!-- This is hostel data fetched from REST API of Java-->
-      <h1>Hostels Fetched from Java API</h1>
+      <h1 class="header">Hostels Fetched from Java API</h1>
       <div id="customers" style="display:inline-grid;">
        <table>
          <tr>
@@ -100,10 +100,10 @@
             <h1 class="text-center ">Hostel Information</h1>
               <form [formGroup]="formdata" (ngSubmit) = "onClickSubmit(formdata.value)">
                   <div class="form-group row">
-                      <div class="col-md-6">
+                      <!-- <div class="col-md-6">
                           <label for="label col-md-3 control-label">Hostel Id</label>
                           <input type="text" class="form-control" formControlName="Hostel Id" id="inputHostelId" placeholder="Hostel Id">
-                      </div>
+                      </div> -->
                       <div class="col-md-6">
                           <label for="label col-md-3 control-label">Hostel Name</label>
                           <input type="text" class="form-control" formControlName="hostelName" id="inputHostelname" placeholder="Hostel Name">
@@ -179,7 +179,7 @@
                   </div>
 				  <div class="col-md-6">
                       <label for="label col-md-3 control-label">Contact Number</label>
-                      <input type="number" class="form-control" formControlName="contactNumber<" name="Contact Number<" placeholder="Contact Number<" required>
+                      <input type="number" class="form-control" formControlName="contactNumber" name="Contact Number" placeholder="Contact Number" required>
                   </div>
                   <div class="col-md-6">
                   <a href="#">
