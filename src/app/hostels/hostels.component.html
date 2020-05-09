@@ -5,7 +5,11 @@
   <body>
       <!-- This is hostel data fetched from REST API of Java-->
       <h1 class="header">Hostels Fetched from Java API</h1>
+<<<<<<< HEAD
       <div id="customers" style="display:inline-grid;margin-left: 95px;">
+=======
+      <div id="customers" style="display:inline-grid;">
+>>>>>>> cd79091d3520dbcec99ea98b71c2fb36c879f3aa
        <table>
          <tr>
            <td>HostelId</td>
@@ -100,6 +104,7 @@
          </tr>
        </table>
      </div>
+<<<<<<< HEAD
      <br><br>
     <div class="container">
         <div class="row">
@@ -196,6 +201,105 @@
            </div>
            <div class="col-md-3"></div>
         </div>
+=======
+     <div class="container">
+  
+      <div class="row">
+          <div class="hostel-data col-md-10 mx-auto">
+            <h1 class="text-center ">Hostel Information</h1>
+              <form [formGroup]="formdata" (ngSubmit) = "onClickSubmit(formdata.value)">
+                  <div class="form-group row">
+                      <!-- <div class="col-md-6">
+                          <label for="label col-md-3 control-label">Hostel Id</label>
+                          <input type="text" class="form-control" formControlName="Hostel Id" id="inputHostelId" placeholder="Hostel Id">
+                      </div> -->
+                      <div class="col-md-6">
+                          <label for="label col-md-3 control-label">Hostel Name</label>
+                          <input type="text" class="form-control" formControlName="hostelName" id="inputHostelname" placeholder="Hostel Name">
+                      </div>
+                      <div class="col-md-6">
+                          <label for="label col-md-3 control-label">First Name</label>
+                          <input type="text" class="form-control" formControlName="firstName" id="inputFirstName" placeholder="First Name">
+                      </div>
+                      <div class="col-md-6">
+                        <label for="label col-md-3 control-label">Last Name</label>
+                        <input type="text" class="form-control" formControlName="lastName" id="inputLastName" name="Last Name" placeholder="Last Name" >
+                    </div>
+                    <div class="col-md-6">
+                      <label for="label col-md-3 control-label">Roll Number</label>
+                      <input type="number" class="form-control" formControlName="rollNumber" name="Roll Number" placeholder="Roll Number" required>
+                  </div>
+                  <div class="col-md-6">
+                      <label for="label col-md-3 control-label">Mother Name</label>
+                      <input type="text" class="form-control" formControlName="motherName" name="Mother Name" placeholder="Mother Name" required>
+                  </div>
+                  <div class="col-md-6">
+                      <label for="label col-md-3 control-label">Mother Contact</label>
+                      <input type="number" class="form-control" formControlName="motherContact" name="Mother Contact" placeholder="Mother Contact" required>
+                  </div>
+				  <div class="col-md-6">
+                      <label for="label col-md-3 control-label">Father Name</label>
+                      <input type="text" class="form-control" formControlName="fatherName" name="Father Name" placeholder="Father Name" required>
+                  </div>
+				  <div class="col-md-6">
+                      <label for="label col-md-3 control-label">Father Contact</label>
+                      <input type="number" class="form-control" formControlName="fatherContact" name="Father Contact" placeholder="Father Contact" required>
+                  </div>
+				  <div class="col-md-6">
+                      <label for="label col-md-3 control-label">Date Of Birth</label>
+                      <input type="date" class="form-control" formControlName="dateOfBirth" name="Date Of Birth" placeholder="Date Of Birth" required>
+                  </div>
+				  <div class="col-md-6">
+                      <label for="label col-md-3 control-label">Course</label>
+                      <input type="text" class="form-control" formControlName="course" name="Course" placeholder="Course" required>
+                  </div>
+				  <div class="col-md-6">
+                      <label for="label col-md-3 control-label">Branch</label>
+                      <input type="text" class="form-control" formControlName="branch" name="Branch" placeholder="Branch" required>
+                  </div>
+				  <div class="col-md-6">
+                      <label for="label col-md-3 control-label">Year</label>
+                      <input type="number" class="form-control" formControlName="year" name="Year" placeholder="Year" required>
+                  </div>
+				  
+				  <div class="col-md-6">
+                      <label for="label col-md-3 control-label">Semester</label>
+                      <input type="number" class="form-control" formControlName="semester" name="Semester" placeholder="Semester" required>
+                  </div>
+				  <div class="col-md-6">
+                      <label for="label col-md-3 control-label">Room Number</label>
+                      <input type="number" class="form-control" formControlName="roomNumber" name="Room Number" placeholder="Room Number" required>
+                  </div>
+				  <div class="col-md-6">
+                      <label for="label col-md-3 control-label">Id Proof</label>
+                      <input type="number" class="form-control" formControlName="idProof" name="Id Proof" placeholder="Id Proof" required>
+                  </div>
+				  <div class="col-md-6">
+                      <label for="label col-md-3 control-label">Guardian Name</label>
+                      <input type="text" class="form-control" formControlName="guardianName" name="Guardian Name" placeholder="Guardian Name" required>
+                  </div>
+				  <div class="col-md-6">
+                      <label for="label col-md-3 control-label">Guardian Contact</label>
+                      <input type="number" class="form-control" formControlName="guardianContact" name="Guardian Contact" placeholder="Guardian Contact" required>
+                  </div>
+				  <div class="col-md-6">
+                      <label for="label col-md-3 control-label">Email Id</label>
+                      <input type="email" class="form-control" formControlName="emailId" name="Email Id" placeholder="Email Id" required>
+                  </div>
+				  <div class="col-md-6">
+                      <label for="label col-md-3 control-label">Contact Number</label>
+                      <input type="number" class="form-control" formControlName="contactNumber" name="Contact Number" placeholder="Contact Number" required>
+                  </div>
+                  <div class="col-md-6">
+                  <a href="#">
+                    <div class="btn btn-secondary btn-outline-info">Submit</div>
+                  </a>
+                </div>
+                  </div>      
+              </form>
+          </div>
+      </div>
+>>>>>>> cd79091d3520dbcec99ea98b71c2fb36c879f3aa
     </div>
   </body>
 </html>

@@ -6,7 +6,11 @@
     margin-left: 0px !important;
 }
 body{
+<<<<<<< HEAD
     background-image: url('image.jpg');
+=======
+    background-image: url('../images/image.jpg');
+>>>>>>> cd79091d3520dbcec99ea98b71c2fb36c879f3aa
     background-attachment: fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;

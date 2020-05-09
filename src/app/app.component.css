@@ -10,7 +10,7 @@ header.masthead{
     padding: 0px;
 }
 body{
-    background-image: url(image.jpg);
+    background-image: url('images/image.jpg');
     background-attachment: fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -45,5 +45,23 @@ h1{
     height: 200px;
     box-shadow: -1px 1px 60px 10px black insert;
 }
-
-
+.navbar{
+    background: rgba(49, 23, 199, 0.4) !important;
+ 
+}
+.form-inline{
+    padding-left: 70px;
+}
+.link-color{
+    color: black;
+    padding-right: 10px;
+}
+.navbar-dark .navbar-brand {
+    color: rgba(255,255,255,.5);
+}
+.text-uppercase {
+    text-transform: none!important;
+}
+.nav-link{
+    font-size: 20px;
+}
