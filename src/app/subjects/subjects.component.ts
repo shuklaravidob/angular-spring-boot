@@ -24,10 +24,10 @@ export class SubjectsComponent implements OnInit {
        this.displaySubmit = 'none';
 
     this.formdata = new FormGroup({
-      subjectId: new FormControl("", Validators.compose([
+      /* subId: new FormControl("", Validators.compose([
          Validators.required,
          Validators.minLength(3)
-      ])),
+      ])), */
       subjectName: new FormControl("", Validators.compose([
          Validators.required,
          Validators.minLength(3)

@@ -10,9 +10,13 @@ import {BsDatepickerModule} from 'ngx-bootstrap/datepicker';
 import {BsDropdownModule} from 'ngx-bootstrap';
 import { from } from 'rxjs';
 import { HomeComponent } from './home/home.component';
+import { AdmissionComponent } from './admission/admission.component'
 import { StudentsComponent } from './students/students.component';
 import { SubjectsComponent } from './subjects/subjects.component';
 import { HostelsComponent } from './hostels/hostels.component';
+import { LoginComponent } from './login/login.component';
+import { TimetableComponent } from './timetable/timetable.component';
+import { LecturerComponent } from './lecturer/lecturer.component';
 
 
 @NgModule({
@@ -20,9 +24,13 @@ import { HostelsComponent } from './hostels/hostels.component';
     AppComponent,
     NewCmpComponent,
     HomeComponent,
+    LoginComponent,
     StudentsComponent,
     SubjectsComponent,
-    HostelsComponent
+    HostelsComponent,
+    AdmissionComponent,
+    TimetableComponent,
+    LecturerComponent
   ],
   imports: [
     BrowserModule,

@@ -12,9 +12,7 @@ export class HostelService{
     private userUrl ='/api/hostels';
     
    /* public login(user : User) {
-
         return this.http.post<User>(this.userUrl+'/login',user);
-
     }
    
     public save(user : User){
@@ -29,7 +27,7 @@ export class HostelService{
     /*public deleteUser(user : User){
       return this.http.delete(this.userUrl+'/deleteUser/'+user.id);
     }*/
-    public deleteHostel(subject : Hostel){
+    public deleteHostel(hostel : Hostel){
       const options = {
         headers: new HttpHeaders({
           'Content-Type': 'application/json'
@@ -39,7 +37,7 @@ export class HostelService{
       console.log(options);
       return this.http.delete(this.userUrl,options);
     }
-    public update(subject : Hostel){
+    public update(hostel : Hostel){
       return this.http.put<Hostel>(this.userUrl,hostel);
     }
   }

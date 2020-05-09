@@ -14,9 +14,7 @@ export class SubjectService{
     private userUrl ='/api/subjects';
     
    /* public login(user : User) {
-
         return this.http.post<User>(this.userUrl+'/login',user);
-
     }
     public save(user : User){
       return this.http.post<User>(this.userUrl+'/save',user);
@@ -30,7 +28,7 @@ export class SubjectService{
     /*public deleteUser(user : User){
       return this.http.delete(this.userUrl+'/deleteUser/'+user.id);
     }*/
-    public deleteStudent(subject : Subject){
+    public deleteSubject(subject : Subject){
       const options = {
         headers: new HttpHeaders({
           'Content-Type': 'application/json'

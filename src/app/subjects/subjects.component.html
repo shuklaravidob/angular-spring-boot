@@ -22,10 +22,10 @@
             <input type="text" [(ngModel)]="subject.subId" disabled>
           </td>
           <td >
-            <input type="text" [(ngModel)]="subject.subjectName" [disabled]="edit">
+            <input type="text" [(ngModel)]="subject.subName" [disabled]="edit">
           </td>
           <td >
-            <input type="text" [(ngModel)]="subject.SubjectCode" [disabled]="edit">
+            <input type="text" [(ngModel)]="subject.subCode" [disabled]="edit">
           </td>
           <td >
             <input type="text" [(ngModel)]="subject.branchName" [disabled]="edit">
@@ -48,46 +48,49 @@
        </table>
      </div>
      <br><br>
-    <div class="container">
-        <div class="row">
-           <div class="col-md-3"></div>
-           <div class="col-md-6">
-                <h1 class="text-center">Subject Information</h1>
-                <form [formGroup]="formdata" (ngSubmit) = "onClickSubmit(formdata.value)" >
-                 <label class="label col-md-3 control-label">Subject Id</label>
-                 <div class="col-md-9">
-                   <input type="number" class="form-control"  formControlName="SubjectId" name="Subject Id" placeholder="Subject Id" required>
-                 </div>
-                 <label class="label col-md-3 control-label">Subject Name</label>
-                 <div class="col-md-9">
-                    <input type="text" class="form-control"  formControlName="subjectName" name="Subject Name" placeholder="Subject Name" required>
-                 </div>
-                 <label class="label col-md-3 control-label">Subject code</label>
-                 <div class="col-md-9">
-                      <input type="text" class="form-control"  formControlName="subjectCode" name="Subject Code" placeholder="Subject Code" required>
-                 </div>
-                 <label class="label col-md-3 control-label">Branch Name</label>
-                 <div class="col-md-9">
-                    <input type="text" class="form-control"  formControlName="branchName" name="Branch Name" placeholder="Branch Name" required>
-                 </div>
-                 <label class="label col-md-3 control-label">Branch Code</label>
-                 <div class="col-md-9">
-                    <input type="number" class="form-control"  formControlName="branchCode" name="Branch Code"   placeholder="Branch Code" required>
-                 </div>
-                 <label class="label col-md-3 control-label">Semester</label>
-                 <div class="col-md-9">
-                    <input type="number" class="form-control"  formControlName="Semester" name="Semester" placeholder="Semester" required>
-                 </div>
-                 <label class="label col-md-3 control-label">Course</label>
-                 <div class="col-md-9">
+     <div class="container">
+      <div class="row">
+         <div class="col-md-10 mx-auto">
+              <h1 class="text-center">Subject Information</h1>
+              <form [formGroup]="formdata" (ngSubmit) = "onClickSubmit(formdata.value)" >
+       <div class="form-group row">
+                   <!--  <div class="col-md-6">
+                        <label class="label col-md-3 control-label">Subject Id</label>
+                        <input type="number" class="form-control"  formControlName="subId" name="subId" placeholder="Subject Id" required>
+                    </div> -->
+          <div class="col-md-6">
+                         <label class="label col-md-3 control-label">Subject Name</label>
+                         <input type="text" class="form-control"  formControlName="subjectName" name="subjectName" placeholder="Subject Name" required>
+                    </div>
+          <div class="col-md-6">
+                       <label class="label col-md-3 control-label">Subject code</label>
+                       <input type="text" class="form-control"  formControlName="subjectCode" name="subjectCode" placeholder="Subject Code" required>
+                   </div>
+         <div class="col-md-6">
+                      <label class="label col-md-3 control-label">Branch Name</label>
+                      <input type="text" class="form-control"  formControlName="branchName" name="branchName" placeholder="Branch Name" required>
+                   </div>
+         <div class="col-md-6">
+                      <label class="label col-md-3 control-label">Branch Code</label>
+                      <input type="number" class="form-control"  formControlName="branchCode" name="branchCode"   placeholder="Branch Code" required>
+                   </div>
+         <div class="col-md-6">
+                    <label class="label col-md-3 control-label">Semester</label>
+                    <input type="number" class="form-control"  formControlName="semester" name="semester" placeholder="semester" required>
+                   </div>
+         <div class="col-md-6">
+                    <label class="label col-md-3 control-label">Course</label>
                     <input type="text" class="form-control"  formControlName="course" name="Course" placeholder="Course" required>
-                 </div>
-                 <a href="#"><div class="btn btn-secondary btn-outline-info">Submit</div></a>   
-                 </form>        
-           </div>
-           <div class="col-md-3"></div>
-        </div>
-    </div>
+                  </div>
+        <div class="col-md-6">
+                      <a href="#">
+                        <button class="btn btn-secondary btn-outline-info" [disabled]="!formdata.valid" value="Submit">Submit</button>
+                     </a>   
+         </div>  
+       </div>
+               </form>        
+      </div>
+  </div>
+</div>
   </body>
 </html>
-

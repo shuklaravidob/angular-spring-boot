@@ -28,27 +28,22 @@ h1{
     padding-bottom: 0.50px;
     margin-left: -200px;
 }
-.data{
-    display: none;
-}
-.customers{
-    display: none;
-}
 .text-center{
     color : black;
     font-size: 30px;
     font-family: Arial, Helvetica, sans-serif;
-    padding-left: 180px;
+    padding-left: 0px;
+    margin-top: 10px;
 }
-.label{
-    padding-top: 15px;
-    margin-left: 10px;
+.login-form{
+    background: rgba(55, 19, 211, 0.4);
+    height: 419px;
+    box-shadow: -1px 1px 60px 10px black insert;
+    border-radius: 25px;
+    width: 537px;
 }
-    
-.btn{
-    margin-top: 50px;
-    margin-left: 80px;
-    background-color: black;
+.text-center-login{
+    font-size: 20px;
 }
 .form-control{
     background: #D3D3D3;
@@ -59,17 +54,31 @@ h1{
     border-radius: 10px;
     margin-left: 5px;
     padding-left: 10px;
-    width: 180px;
-    
+    width: 200px;
+    height: 38px;
 }
 
-.col-md-10{
-    background: rgba(55, 19, 211, 0.4);
-    height: 614px;
-    box-shadow: -1px 1px 60px 10px black insert;
-    border-radius: 25px;
-   
+.btn-login{
+    margin-top: 20px;
+    background-color: black;
+    font-size: 15px;
+    font-weight: bold;
+    width: 200px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    height: 40px;
 }
-.row{
-    width: 640px;
+.btn-outline-info {
+    color: #17a2b8;
+    border-color: #17a2b8;
+}
+.checkbox-inline, .radio-inline {
+    padding-left: 60px;
+    font-weight: 400;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.pull-right{    
+    padding-left: 80px; 
 }

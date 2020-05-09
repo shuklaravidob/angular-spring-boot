@@ -58,13 +58,12 @@ export class HostelsComponent implements OnInit {
     )
   }
  
-  onSubmit(customerData) {
+  /*onSubmit(customerData) {
     // Process checkout data here
     this.hostels = this.hostelService.hostel();
     this.studentForm.reset();
-
     console.warn('Your order has been submitted', customerData);
-  }
+  } */
 
   onClickSubmit(data) {
     this.hostelData = new Hostel();
