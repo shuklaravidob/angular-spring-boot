@@ -1,16 +1,10 @@
-header.masthead{
-    text-align:center;
-    color: white;
-    background-attachment: scroll;
-    background-position: center center;
-    background-size: cover;
-}
+
 *{
     margin: 0px;
     padding: 0px;
 }
 body{
-    background-image: url('images/image.jpg');
+    background-image: url(image.jpg);
     background-attachment: fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;

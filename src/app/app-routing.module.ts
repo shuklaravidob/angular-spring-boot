@@ -7,7 +7,7 @@ import { SubjectsComponent } from './subjects/subjects.component';
 import { HostelsComponent } from './hostels/hostels.component';
 import { LoginComponent } from './login/login.component';
 import { from } from 'rxjs';
-import { LoginComponent } from './login/login.component';
+
 
 const routes: Routes = [
    {path:"home", component:HomeComponent},
@@ -23,8 +23,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { } export const
-<<<<<<< HEAD
 RoutingConponent = [HomeComponent,AdmissionComponent,StudentsComponent,SubjectsComponent,HostelsComponent,LoginComponent];
-=======
-RoutingConponent = [HomeComponent,StudentsComponent,SubjectsComponent,HostelsComponent,LoginComponent];
->>>>>>> cd79091d3520dbcec99ea98b71c2fb36c879f3aa

@@ -1,2 +1,2 @@
-export class Login.Model {
+export class Login{
 }
