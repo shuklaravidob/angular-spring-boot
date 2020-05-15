@@ -17,6 +17,7 @@ import { HostelsComponent } from './hostels/hostels.component';
 import { LoginComponent } from './login/login.component';
 import { TimetableComponent } from './timetable/timetable.component';
 import { LecturerComponent } from './lecturer/lecturer.component';
+import{LoginComponent} from './login/login.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { LecturerComponent } from './lecturer/lecturer.component';
     HostelsComponent,
     AdmissionComponent,
     TimetableComponent,
-    LecturerComponent
+    LecturerComponent,
+	LoginComponent
   ],
   imports: [
     BrowserModule,
