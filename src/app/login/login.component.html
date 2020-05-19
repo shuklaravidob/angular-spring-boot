@@ -3,67 +3,46 @@
     <title></title>
   </head>
   <body>
-     <!-- This is login form from REST API of Java-->
-     
-     <div id="customers" style="display:inline-grid;margin-left: 95px;">
-     <h1 class="header">Students Fetched from Java API</h1>
-      <table>
-        <tr>
-          <td>User Id</td>
-          <td>UserName</td>
-          <td>Password</td>
-          <td>RememberMe</td>
-          <td>ForgotPassword</td>
-        </tr>
-        <tr *ngFor="let user of users">
-          <td >
-            <input type="text" [(ngModel)]="user.userId" disabled>
-          </td>
-          <td >
-            <input type="text" [(ngModel)]="user.userName" [disabled]="edit">
-          </td>
-          <td >
-            <input type="text" [(ngModel)]="user.password" [disabled]="edit">
-          </td>
-          <td >
-            <input type="text" [(ngModel)]="user.rememberMe" [disabled]="edit">
-          </td>
-          <td >
-            <input type="text" [(ngModel)]="user.forgotPassword" [disabled]="edit">
-          </td>
-          <td >
-            <button class="btn btn-danger" (click)="deleteUser(user)" > Delete</button> &nbsp;&nbsp;&nbsp;
-            <button class="btn btn-danger" (click)="modifyUser()" [style.display]="displayModify"> Modify</button>
-            <button class="btn btn-danger" (click)="submitUser(user)" [style.display]="displaySubmit"> Submit</button>
-          </td>
-        </tr>
-      </table>
-    </div>
-    <br><br>
-    <div class="container">
-        <div class="login-form">
-            <form  [formGroup]="formdata" (ngSubmit) = "onClickSubmit(formdata.value)">
-                <h2 class="text-center">Login Portal</h2>
-                <div class="form-group">
-                    <label for="label col-md-3 control-label" style = "margin-left: 60px;">User Name</label>
-                    <input type="text" class="form-control" placeholder="Username" required="required">
-                </div>
-                <div class="form-group">
-                    <label for="label col-md-3 control-label"  style = "margin-left: 68px;">Password</label>
-                    <input type="password" class="form-control" placeholder="Password" required="required">
-                </div>
-                <div class="form-group">
-                  <a href="#">
-                    <button class="btn btn-secondary btn-outline-info" [disabled]="!formdata.valid" value="Log In">Log In</button>
-                  </a>
-                </div>
-                <div class="clearfix">
-                    <label class="pull-left checkbox-inline"><input type="checkbox"> Remember me</label>
-                    <a href="#" class="pull-right">Forgot Password?</a>
-                </div>        
-            </form>
-           <!-- <p class="text-center-login"><a href="#">Create an Account</a></p>-->
-        </div>       
-    </div>
-  </body>
+
+
+<div class="container">
+<div class="row">
+  <div class="col-md-6 offset-md-3 mt-4">
+      <h1>Login Portal</h1>
+      <form #f="ngForm"
+      (ngSubmit)="loginUser(f)">
+          <div class="form-group">
+              <label  for="loginUsername" class= "user-label">Username</label>
+              <input type="text"
+                     name="user"
+                     ngModel
+                     required
+                     [(ngModel)]="user"
+                     class="form-control"
+                     id="loginUsername"
+                     placeholder="Enter username">
+          </div>
+          <div class="form-group">
+              <label for="loginPassword" class= "password-label">Password</label>
+              <input type="password"
+                     name="password"
+                     ngModel
+                     required 
+                     [(ngModel)]="password"
+                     class="form-control"
+                     id="loginPassword"
+                     placeholder="Password">
+          </div>
+          <div class="form-group form-check">
+              <a [routerLink]="['/reset-password']">Forgot Password</a>
+          </div>
+          <input type="submit"
+                 [disabled]="f.invalid"
+                  class="button-login btn-primary "
+                  value="Login" (click)="loginUser(f)">
+      </form>
+  </div>
+</div>
+</div>
+</body>
 </html>

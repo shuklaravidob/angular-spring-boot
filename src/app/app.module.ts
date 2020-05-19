@@ -18,6 +18,10 @@ import { LoginComponent } from './login/login.component';
 import { TimetableComponent } from './timetable/timetable.component';
 import { LecturerComponent } from './lecturer/lecturer.component';
 import{LoginComponent} from './login/login.component';
+import{AuthModule} from './auth/auth.module';
+import { NavbarComponent } from './navbar/navbar.component';
+import {MatToolbarModule } from '@angular/material/toolbar';
+import {MatButtonModule} from '@angular/material/button';
 
 
 @NgModule({
@@ -32,7 +36,8 @@ import{LoginComponent} from './login/login.component';
     AdmissionComponent,
     TimetableComponent,
     LecturerComponent,
-	LoginComponent
+	LoginComponent,
+	NavbarComponent
   ],
   imports: [
     BrowserModule,
@@ -43,6 +48,9 @@ import{LoginComponent} from './login/login.component';
     BsDatepickerModule,
     BsDropdownModule,
     AppRoutingModule
+	AuthModule,
+    MatToolbarModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

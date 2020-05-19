@@ -36,29 +36,34 @@ body{
 }
 .col-md-6{
     background: rgba(55, 19, 211, 0.4);
-    height: 350px;
+    height: 420px;
     box-shadow: -1px 1px 60px 10px black insert;
     border-radius: 25px;
     width: 200px;
    
 }
 h1{
-    margin-left: 180px;
+    margin-left: 120px;
     margin-top: 10px;
 }
-.user-label{
-    margin-left: 100px;
-}
-.password-label{
-    margin-left: 100px;
-}
-.form-check{
-    margin-left: 100px;
-}
-.button-login{
+.button-register{
     margin-left: 180px !important;
     width: 150px;
     border-radius: 10px;
     color: #17a2b8;
     background-color: black;
+    margin-top: 10px;
+}
+.register-label{
+    margin-left: 100px;
+}
+.password-label{
+    margin-left: 100px;
+}
+.email-label{
+    margin-left: 100px;
+}
+.alert{
+    color: white;
+    background: black;
 }
